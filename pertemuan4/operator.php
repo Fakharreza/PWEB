@@ -1,57 +1,62 @@
 <?php 
 
-$nilainumerik = 92;
+$a = 10;
+$b = 5;
 
-if($nilainumerik >= 90 && $nilainumerik <= 100) {
-    echo "Nilai : A","<br>" ; 
-} elseif ($nilainumerik >= 80 && $nilainumerik < 90) {
-    echo "NIlai : B","<br>";
-} elseif ($nilainumerik >= 70 && $nilainumerik < 80) {
-    echo "NIlai : C","<br>";
-} elseif ($nilainumerik < 70) {
-    echo "NIlai : D","<br>";
-}
+$tambah = $a + $b;
+$kurang = $a - $b;
+$kali = $a * $b;
+$bagi = $a / $b;
+$sisabagi = $a % $b;
+$pangkat = $a ** $b;
 
-$jaraksaatini = 0;
-$jaraktarget = 500;
-$peningkatanharian = 30;
-$hari = 0;
+echo "Hasil Penjumlahan: " . $tambah . "<br>";
+echo "Hasil Pengurangan: " . $kurang . "<br>";
+echo "Hasil Perkalian: " . $kali . "<br>";
+echo "Hasil Pembagian: " . $bagi . "<br>";
+echo "Sisa Pembagian: " . $sisabagi . "<br>";
+echo "Hasil Pangkat: " . $pangkat . "<br>";
 
-while  ($jaraksaatini < $jaraktarget) {
-    $jaraksaatini += $peningkatanharian;
-    $hari++;
-}
-echo "Atlet tersebut memerlukan $hari hari untuk mencapai jarak 500KM." . "<br>";
+$hasilsama = $a == $b;
+$hasiltidaksama = $a != $b;
+$hasillebihkecil = $a < $b;
+$hasillebihbesar = $a > $b;
+$hasillebihkecilsama = $a <= $b;
+$hasillebihbesarsama = $a >= $b;
 
-$jumlahlahan = 10;
-$tanamanperlahan = 5;
-$buahpertanaman = 10;
-$jumlahbuah = 0;
+echo "Apakah $a sama dengan $b? " . ($hasilsama ? 'Ya' : 'Tidak') . "<br>";
+echo "Apakah $a tidak sama dengan $b? " . ($hasiltidaksama ? 'Ya' : 'Tidak') . "<br>";
+echo "Apakah $a lebih kecil dari $b? " . ($hasillebihkecil ? 'Ya' : 'Tidak') . "<br>";
+echo "Apakah $a lebih besar dari $b? " . ($hasillebihbesar ? 'Ya' : 'Tidak') . "<br>";
+echo "Apakah $a lebih kecil atau sama dengan $b? " . ($hasillebihkecilsama ? 'Ya' : 'Tidak') . "<br>";
+echo "Apakah $a lebih besar atau sama dengan $b? " . ($hasillebihbesarsama ? 'Ya' : 'Tidak') . "<br>";
 
-for ($i = 1; $i <= $jumlahlahan; $i++) {
-    $jumlahbuah += ($tanamanperlahan * $buahpertanaman);
-}
+$hasiland = $a && $b;
+$hasilor = $a || $b;
+$hasilnota = !$a;
+$hasilnotb = !$b;
 
-echo "Jumlah Buah yang akan dipanen adalah: $jumlahbuah", "<br>";
+echo "Hasil dari \$a && \$b: " . ($hasiland ? 'true' : 'false') . "<br>";
+echo "Hasil dari \$a || \$b: " . ($hasilor ? 'true' : 'false') . "<br>";
+echo "Hasil dari !\$a: " . ($hasilnota ? 'true' : 'false') . "<br>";
+echo "Hasil dari !\$b: " . ($hasilnotb ? 'true' : 'false') . "<br>";
 
-$skorujian = [85,92,78,96,88];
-$totalskor = 0;
+$TambahSamaDengan = $a += $b; 
+$KurangSamaDengan = $a -= $b; 
+$KaliSamaDengan = $a *= $b;   
+$BagiSamaDengan = $a /= $b;   
+$SisaBagiSamaDengan = $a %= $b;
 
-foreach ($skorujian as $skor) {
-    $totalskor += $skor;
-}
+echo "Setelah $a += $b, nilai $a menjadi  $TambahSamaDengan;", "<br>";
+echo "Setelah $a -= $b, nilai $a menjadi  $KurangSamaDengan;", "<br>";
+echo "Setelah $a *= $b, nilai $a menjadi  $KaliSamaDengan;", "<br>" ;
+echo "Setelah $a /= $b, nilai $a menjadi  $BagiSamaDengan;", "<br>" ;
+echo "Setelah $a %= $b, nilai $a menjadi  $SisaBagiSamaDengan;", "<br>"; 
 
-echo "Total Skor ujian adalah : $totalskor","<br>";
+$hasilidentik = $a ===$b;
+$hasiltidakidentik = $a !== $b;
 
-$nilaisiswa = [85,92,58,64,90,55,88,79,79,96];
-
-foreach ($nilaisiswa as $nilai) {
-    if ($nilai < 60) {
-        echo "Nilai: $nilai (tidak lulus) <br>";
-        continue;
-    }
-    echo "Nilai: $nilai(Lulus) <br>";
-}
-
+echo "Hasil dari \$a===\$b " . ($hasilidentik ? 'true' : 'false') . "<br>";
+echo "Hasil dari \$a !== \$b: " . ($hasiltidakidentik ? 'true' : 'false') . "<br>"; 
 
 ?>
