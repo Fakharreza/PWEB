@@ -50,7 +50,7 @@ foreach ($nilaisiswa as $nilai) {
         echo "Nilai: $nilai (tidak lulus) <br>";
         continue;
     }
-    echo "Nilai: $nilai(LUlus) <br>";
+    echo "Nilai: $nilai(Lulus) <br>";
 }
 
 
