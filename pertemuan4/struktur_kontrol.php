@@ -54,4 +54,52 @@ foreach ($nilaisiswa as $nilai) {
 }
 
 
+echo "<br>";
+echo "===== Menghitung Total Nilai =====";
+$nilaiMtk10 = [85, 92, 78, 64, 90, 75, 88, 79, 70, 96];
+    sort($nilaiMtk10);
+
+    $jumlahNilaiMtk10 = 0;
+    for ($i = 2; $i < (count($nilaiMtk10)-2); $i++){
+        $jumlahNilaiMtk10 += $nilaiMtk10[$i];
+    }
+    $rataRataNilai = $jumlahNilaiMtk10 / (count($nilaiMtk10)-4);
+    echo "<br> Rata-rata nilai Matematika = $rataRataNilai";
+    echo "<br>";
+
+
+    echo "<br>";
+    echo "===== Menghitung harga diskon =====";
+$totalBayar = 12000;
+    if ($totalBayar > 10000){
+        echo "<br>Selamat! Anda mendapatkan diskon 20%<br>";
+        echo "Total belanja : $totalBayar<br>";
+        echo "Total bayar :". $totalBayar-($totalBayar*0.20) . "<br>";
+    }else
+        echo "<br>Total bayar : $totalBayar";
+        echo "<br>";
+
+
+        echo "<br>";
+        echo "=====  =====";
+$hargaAwal = 120000;
+$diskonPersentase = 0.20;
+
+$hargaSetelahDiskon = $hargaAwal - ($diskonPersentase * $hargaAwal);
+echo "Harga setelah diskon: Rp " . $hargaSetelahDiskon;
+
+echo "<br>";
+echo "===== Menghitung Poin =====";
+$skor = [100,200,250,300];
+
+$totalSkor = 0;
+foreach ($skor as $angka){
+    $totalSkor += $angka; 
+}
+echo "<br>";
+echo "Total skor pemain adalah $totalSkor <br>";
+echo "apakah pemain mendapat hadiah tambahan?<br>";
+$hadiah = ($totalSkor > 500)? "Ya " : "tidak";
+echo $hadiah;   
+
 ?>

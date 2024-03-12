@@ -59,4 +59,21 @@ $hasiltidakidentik = $a !== $b;
 echo "Hasil dari \$a===\$b " . ($hasilidentik ? 'true' : 'false') . "<br>";
 echo "Hasil dari \$a !== \$b: " . ($hasiltidakidentik ? 'true' : 'false') . "<br>"; 
 
+
+
+echo "<br>";
+echo "===== Menghitung Kursi Kosong =====";
+$totalKursi = 45;
+$kursiTerisi = 28;
+
+$kursiKosong = $totalKursi - $kursiTerisi;
+$persentaseKursiKosong = ($kursiKosong / $totalKursi) * 100;
+
+echo "<br>";
+echo "Total Kursi: $totalKursi <br>";
+echo "Kursi Terisi: $kursiTerisi <br>";
+echo "Kursi Kosong: $kursiKosong <br>";
+echo "Persentase Kursi Kosong: $persentaseKursiKosong% <br>";
+
+
 ?>

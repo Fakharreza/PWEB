@@ -55,7 +55,7 @@ $daftarNilai = [
         echo "Nama: {$nilai[0]}, <br> Nilai:$nilai[1] <br>";
     }
 
-    echo "==== SOAL CERITA ====";
+    echo "==== Daftar Nilai ====";
     $data_siswa = array(
     'Alice' => 85,
     'Bob' => 92,
