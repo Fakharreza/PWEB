@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,23 +5,16 @@
         <script src="jquery-3.7.1.js"></script>
         <script>
            $(document).ready(function(){
-            // Ketika tombol "Add Row" diklik, tambahkan baris baru ke tabel
             $(".add-row").click(function(){
-                // Ambil nilai dari input nama dan email
                 var name = $("#name").val();
                 var email = $("#email").val();
-                // Buat markup untuk baris baru
                 var markup = "<tr><td><input type='checkbox' name='record'></td><td>"
                              + name + "</td><td>" + email + "</td></tr>";
-                // Tambahkan markup ke dalam tbody tabel
                 $("table tbody").append(markup);
             });
-            // Ketika tombol "Delete Row" diklik, hapus baris yang dicentang
             $(".delete-row").click(function(){
-                // Loop melalui setiap checkbox yang dicentang
                 $("table tbody").find('input[name="record"]').each(function(){
                     if($(this).is(":checked")){
-                        // Hapus baris yang memiliki checkbox yang dicentang
                         $(this).parents("tr").remove();
                     }
                 });

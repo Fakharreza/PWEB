@@ -6,30 +6,24 @@
 		<script>
 			 var i = 0;
         $(document).ready(function () {
-            // Sembunyikan judul slideshow dan gambar
             $(".slidertitle, #slider img").hide();
-            // Panggil fungsi untuk menampilkan gambar selanjutnya
             showNextImage();
-            // Set interval untuk menampilkan gambar selanjutnya setiap 3 detik
             setInterval("showNextImage()", 3000);
         });
         function showNextImage() {
             i++;
-            // Tampilkan gambar dengan fadeIn
             
             $("#sliderImage" + i)
                 .appendTo("#slider")
                 .fadeIn(1100)
                 .delay(1100)
                 .fadeOut(1100);
-            // Tampilkan judul dengan fadeIn
             
             $("#title" + i)
                 .appendTo("#slider")
                 .fadeIn(1100)
                 .delay(1100)
                 .fadeOut(1100);
-            // Jika indeks mencapai 3, kembalikan ke 0
             if (i == 3) {
                 i = 0;
             }

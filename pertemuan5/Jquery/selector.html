@@ -4,17 +4,11 @@
     <script src="jquery-3.7.1.js"></script>
     <script>
         $(document).ready(function(){
-            // Ketika tombol di-klik, mengatur aksi untuk menyembunyikan elemen-elemen yang dipilih
             $("button").click(function(){
-                // Menyembunyikan semua elemen h2
                 $("h2").hide();
-                // Menyembunyikan semua elemen dengan kelas "subjudul"
                 $(".subjudul").hide();
-                // Menyembunyikan elemen dengan id "paragraf"
                 $("#paragraf").hide();
-                // Menyembunyikan elemen dengan id "paragraf" yang memiliki kelas "dua"
                 $("#paragraf.dua").hide();
-                // Menyembunyikan elemen p di dalam div yang memiliki kelas "paragraf"
                 $("#div p.paragraf").hide();
             });
         });
