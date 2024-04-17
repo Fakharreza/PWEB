@@ -15,14 +15,14 @@
                 var input = $(this).next('input[type="number"]');
                 if (input.is(':visible')) {
                     input.hide();
-                    $('.btn-cat').prop('disabled', false); // Mengaktifkan kembali semua tombol kategori tiket
-                    $('.btn.btn-primary').hide(); // Menyembunyikan tombol "Beli Tiket" jika tidak ada input yang ditampilkan
+                    $('.btn-cat').prop('disabled', false); 
+                    $('.btn.btn-primary').hide();
                 } else {
-                    $('input[type="number"]').hide(); // Menyembunyikan semua input kategori tiket
-                    input.show(); // Menampilkan input untuk kategori tiket yang diklik
-                    $('.btn-cat').prop('disabled', true); // Menonaktifkan semua tombol kategori tiket
-                    $(this).prop('disabled', false); // Mengaktifkan tombol kategori tiket yang diklik
-                    $('.btn.btn-primary').show(); // Menampilkan tombol "Beli Tiket"
+                    $('input[type="number"]').hide();
+                    input.show();
+                    $('.btn-cat').prop('disabled', true);
+                    $(this).prop('disabled', false); 
+                    $('.btn.btn-primary').show(); 
                 }
             });
         });
