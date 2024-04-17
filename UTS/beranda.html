@@ -8,9 +8,28 @@
     <script src="jquery-3.7.1.js"></script>
     <link rel="stylesheet" type="text/css" href="styleSlide.css"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleSlideShow.css">
     <script>
+        $(document).ready(function() {
+            $('.btn-cat').click(function() {
+                var input = $(this).next('input[type="number"]');
+                if (input.is(':visible')) {
+                    input.hide();
+                    $('.btn-cat').prop('disabled', false); // Mengaktifkan kembali semua tombol kategori tiket
+                    $('.btn.btn-primary').hide(); // Menyembunyikan tombol "Beli Tiket" jika tidak ada input yang ditampilkan
+                } else {
+                    $('input[type="number"]').hide(); // Menyembunyikan semua input kategori tiket
+                    input.show(); // Menampilkan input untuk kategori tiket yang diklik
+                    $('.btn-cat').prop('disabled', true); // Menonaktifkan semua tombol kategori tiket
+                    $(this).prop('disabled', false); // Mengaktifkan tombol kategori tiket yang diklik
+                    $('.btn.btn-primary').show(); // Menampilkan tombol "Beli Tiket"
+                }
+            });
+        });
+
+
         $(document) .ready(function(){
-            
+            $("#kotak2").hide(); 
             $("#flip").click(function(){ 
                 $("#kotak2").slideToggle("slow"); 
             });
@@ -47,29 +66,25 @@
         <h1>Selamat Datang !</h1>
         <ul>
             <div id="slider">
-                <img id="sliderImage1" src="img/gambar1.jpg" />
-                <img id="sliderImage2" src="img/gambar2.jpg" />
-                <img id="sliderImage3" src="img/gambar3.jpg" />
+                <img id="sliderImage1" src="img/reality.jpg" />
+                <img id="sliderImage2" src="img/reality2.jpg" />
+                <img id="sliderImage3" src="img/reality3.jpg" />
             </div>
             <div id=flip>Tiket yang Bisa Dibeli</div>
-            <div id=kotak2>
+            <div id="kotak2">
                 <form action="prosesBeli.php" method="post">
-                    <p>
-                      CAT 1 - Rp 100.000
-                      <input type="text" name="belitiket1" value="0"/>
-                    </p>
-                    <p>
-                      CAT 2 - Rp 150.000
-                      <input type="text" name="belitiket2" value="0"/>
-                    </p>
-                    <p>
-                      Festival - Rp 200.000
-                      <input type="text" name="belitiket3" value="0"/>
-                    </p>
-                    <button type=" button" class="btn btn-primary ">beli</button>
-                  </form>
-                <ul>
-            </div>
+                    <button type="button" class="btn-cat" id="cat1">CAT 1 - Rp 100.000</button>
+                    <input type="number" name="belitiket1" id="belitiket1" value="0" min="0" max="10" style="display: none;"/>
+                    
+                    <button type="button" class="btn-cat" id="cat2">CAT 2 - Rp 150.000</button>
+                    <input type="number" name="belitiket2" id="belitiket2" value="0" min="0" max="10" style="display: none;"/>
+                    
+                    <button type="button" class="btn-cat" id="festival">Festival - Rp 200.000</button>
+                    <input type="number" name="belitiket3" id="belitiket3" value="0" min="0" max="10" style="display: none;"/>
+                    
+                    <button type="submit" class="btn btn-primary" style="display: none;">Beli Tiket</button>
+                </form>
+            </div>            
         </ul>
         <a href="keranjangBelanja.php">cek keranjang belanja</a>
         <a href="logout.php">Logout</a>
