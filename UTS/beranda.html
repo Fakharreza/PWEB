@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda</title>
+    <script src="jquery-3.7.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="styleSlide.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $(document) .ready(function(){
+            
+            $("#flip").click(function(){ 
+                $("#kotak2").slideToggle("slow"); 
+            });
+          
+        });
+        var i = 0;
+        $(document).ready(function () {
+            $(" #slider img").hide();
+            showNextImage();
+            setInterval("showNextImage()", 3000);
+        });
+        function showNextImage() {
+            i++;
+            
+            $("#sliderImage" + i)
+                .appendTo("#slider")
+                .fadeIn(1100)
+                .delay(1100)
+                .fadeOut(1100);
+            
+            $("#title" + i)
+                .appendTo("#slider")
+                .fadeIn(1100)
+                .delay(1100)
+                .fadeOut(1100);
+            if (i == 3) {
+                i = 0;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat Datang !</h1>
+        <ul>
+            <div id="slider">
+                <img id="sliderImage1" src="img/gambar1.jpg" />
+                <img id="sliderImage2" src="img/gambar2.jpg" />
+                <img id="sliderImage3" src="img/gambar3.jpg" />
+            </div>
+            <div id=flip>Tiket yang Bisa Dibeli</div>
+            <div id=kotak2>
+                <form action="prosesBeli.php" method="post">
+                    <p>
+                      CAT 1 - Rp 100.000
+                      <input type="text" name="belitiket1" value="0"/>
+                    </p>
+                    <p>
+                      CAT 2 - Rp 150.000
+                      <input type="text" name="belitiket2" value="0"/>
+                    </p>
+                    <p>
+                      Festival - Rp 200.000
+                      <input type="text" name="belitiket3" value="0"/>
+                    </p>
+                    <button type=" button" class="btn btn-primary ">beli</button>
+                  </form>
+                <ul>
+            </div>
+        </ul>
+        <a href="keranjangBelanja.php">cek keranjang belanja</a>
+        <a href="logout.php">Logout</a>
+    </div>
+</body>
+</html>

@@ -1,15 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-</head>
-<body>
-    <h2>Keranjang Belanja</h2>
-
-    
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,6 +31,7 @@
             echo "Jumlah Tiket konser C: " . $belitiket3 . "<br>";
             ?>
         </ul>
+        <a href="beranda.html">Kembali</a>
         <a href="logout.php">Logout</a>
     </div>
 </body>

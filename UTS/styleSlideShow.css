@@ -1,0 +1,17 @@
+/* Style css untuk file slide show */
+#slider {
+	padding: 10px 0 10px;
+	position: relative;
+	width: 300px;
+	height: 300px;
+}
+
+#slider img {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	/* -webkit-border-radius: 5px 5px 5px 5px; */
+	border-radius: 5px;
+	/* -moz-border-radius: 5px 5px 5px 5px; */
+}
+

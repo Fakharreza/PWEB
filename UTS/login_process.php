@@ -1,15 +1,22 @@
 <?php
-session_start();
+    include "koneksi.php";  
 
-// Simulasikan validasi login sederhana
-$username = "admin";
-$password = "password";
-
-if ($_POST['username'] == $username && $_POST['password'] == $password) {
-    $_SESSION['username'] = $username; // Simpan username ke dalam session
-    echo "success";
+    $username = $_POST['username'];
+    $password = md5($_POST['password']);
     
-} else {
-    echo "error";
-}
+    $query = "SELECT * FROM user WHERE username = '$username' and password = '$password'";
+    $result = mysqli_query($conn, $query);
+    $cek = mysqli_num_rows($result);
+
+    
+    if ($cek){
+        echo "Anda berhasil login"; ?>
+        <a href="beranda.html">Halaman Home</a>
+    <?php
+    } else {
+        echo "Anda gagal Login, silahkan "; ?>
+        <a href="index.html">Login Kembali</a>
+    <?php
+        echo mysqli_error($conn); 
+    }
 ?>
