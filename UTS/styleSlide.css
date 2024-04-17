@@ -1,0 +1,11 @@
+/* Style css untuk file effecrSlide */
+#kotak1, #flip {
+    padding:5px;
+    text-align:center;
+    background-color:#35c6bf;
+    border: solid 2px #e8f1bb;
+    border-radius: 5px;
+    }
+    #kotak1 {
+    padding: 50px;
+    }
