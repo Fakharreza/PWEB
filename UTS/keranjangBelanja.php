@@ -7,15 +7,6 @@
     <script src="jquery-3.7.1.js"></script>
     <link rel="stylesheet" type="text/css" href="styleSlide.css"/>
     <link rel="stylesheet" href="style.css">
-    <script>
-        $(document) .ready(function(){
-            
-            $("#flip").click(function(){ 
-                $("#kotak2").slideToggle("slow"); 
-            });
-          
-        });
-    </script>
 </head>
 <body>
     <div class="navbar">
