@@ -1,8 +1,10 @@
 <?php
     include "koneksi.php";  
+    session_start();
 
     $username = $_POST['username'];
     $password = md5($_POST['password']);
+    $_SESSION['username'] = $username;
     
     $query = "SELECT * FROM user WHERE username = '$username' and password = '$password'";
     $result = mysqli_query($conn, $query);
@@ -11,7 +13,7 @@
     
     if ($cek){
         echo "Anda berhasil login"; ?>
-        <a href="beranda.html">Halaman Home</a>
+        <a href="beranda.php">Halaman Home</a>
     <?php
     } else {
         echo "Anda gagal Login, silahkan "; ?>

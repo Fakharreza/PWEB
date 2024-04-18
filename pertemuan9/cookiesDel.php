@@ -1,3 +1,3 @@
-<?php
-setcookie("user", "", time()-3600);
+<?phpsetcookie("user", "", time()-3600);
+
 ?>

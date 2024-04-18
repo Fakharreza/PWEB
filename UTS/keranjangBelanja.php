@@ -18,21 +18,27 @@
     </script>
 </head>
 <body>
+    <div class="navbar">
+        <a href="beranda.php">Beranda</a>
+        <a href="keranjangBelanja.php">Keranjang</a>
+        <a href="logout.php">Logout</a>
+    </div>
     <div class="container">
         <ul>
         <h2>Keranjang Belanja</h2>
             <?php
-            $belitiket1 = $_COOKIE['belitiket1'];
-            $belitiket2 = $_COOKIE['belitiket2'];
-            $belitiket3 = $_COOKIE['belitiket3'];
+            $belitiket1 = $_COOKIE['belitiket1'] ?? 0;
+            $belitiket2 = $_COOKIE['belitiket2'] ?? 0;
+            $belitiket3 = $_COOKIE['belitiket3'] ?? 0;
 
             echo "Jumlah Tiket konser A: " . $belitiket1 . "<br>";
             echo "Jumlah Tiket konser B: " . $belitiket2 . "<br>";
             echo "Jumlah Tiket konser C: " . $belitiket3 . "<br>";
             ?>
         </ul>
-        <a href="beranda.html">Kembali</a>
-        <a href="logout.php">Logout</a>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 - Fakhar Reza Alamsyah</p>
     </div>
 </body>
 </html>
