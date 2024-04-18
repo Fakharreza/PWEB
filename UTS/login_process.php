@@ -16,7 +16,7 @@
         <a href="beranda.php">Halaman Home</a>
     <?php
     } else {
-        echo "Anda gagal Login, silahkan "; ?>
+        echo "Username atau Password anda salah, silahkan "; ?>
         <a href="index.html">Login Kembali</a>
     <?php
         echo mysqli_error($conn); 

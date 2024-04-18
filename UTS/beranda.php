@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="styleSlide.css"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleSlideShow.css">
-    <link rel="stylesheet" href="script.js">
     <script>
         $(document).ready(function() {
             $('.btn-cat').click(function() {
